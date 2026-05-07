@@ -1,0 +1,20 @@
+body {
+    background-color: rgb(0, 0, 0); /* Background color */
+}
+
+h2 {
+    color: rgb(255, 255, 255);  /* Text color */
+    font-size: 30px;    /* Text size */
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;  /* Font type */
+    font-size: 20px;    /* Text size */
+    color: rgb(255, 255, 255);  /* Text color */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
