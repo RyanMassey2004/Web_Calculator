@@ -10,7 +10,7 @@
 
     function calculate() {
       try {
-        display.value = eval(display.value);
+        display.value = Function('"use strict"; return (' + display.value + ')')();
       } catch {
         display.value = "Error";
       }
