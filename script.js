@@ -1,36 +1,17 @@
-function add() { // Button function for testing purposes
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let answer = num1 + num2;
-    alert(answer);
-}
+    const display = document.getElementById("display");
 
-function subtract() {
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let answer = num1 - num2;
-    alert(answer);
-}
-
-function multiply() {
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let answer = num1 * num2;
-    alert(answer);
-}
-
-function divide() {
-    let num1 = Number(document.getElementById("num1").value);
-    let num2 = Number(document.getElementById("num2").value);
-    let answer = num1 / num2;
-    if (num2 === 0){
-        if (num1 === 0) {
-            alert("Indeterminate");
-        }
-        else
-            alert("Undefined");
+    function appendValue(value) {
+      display.value += value;
     }
-    else
-        alert(answer);
-    
-}
+
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    function calculate() {
+      try {
+        display.value = eval(display.value);
+      } catch {
+        display.value = "Error";
+      }
+    }
